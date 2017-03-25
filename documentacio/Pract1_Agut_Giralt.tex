@@ -105,7 +105,7 @@ L'objectiu principal d'aquesta pràctica és implementar els protocols apresos a
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/rip.png}
-\caption{Topologia de la xarxa a efectuar l'exercici}
+\caption{OSPF - Topologia de la xarxa a efectuar l'exercici}
 \end{center}
 \end{figure}
 Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200}
@@ -140,79 +140,127 @@ Instead of: & Use:          \\ \hline
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R1-route.png}
-\caption{Comanda \textit{show ip route} en el encaminador R1}
+\caption{OSPF - Comanda \textit{show ip route} en el encaminador R1}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R1-database.png}
-\caption{Comanda \textit{show ip ospf database} en el encaminador R1}
+\caption{OSPF - Comanda \textit{show ip ospf database} en el encaminador R1}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{Images/ospf-R1-conectivity.png}
-\caption{Prova de conectivitat a la xarxa des de l'encaminador R1}
+\caption{OSPF - Prova de connectivitat a la xarxa des de l'encaminador R1}
 \end{center}
 \end{figure}
 \subsubsection{Encaminador R2}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R2-route.png}
-\caption{Comanda \textit{show ip route} en el encaminador R2}
+\caption{OSPF - Comanda \textit{show ip route} en el encaminador R2}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R2-database.png}
-\caption{Comanda \textit{show ip ospf database} en el encaminador R2}
+\caption{OSPF - Comanda \textit{show ip ospf database} en el encaminador R2}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{Images/ospf-R2-conectivity.png}
-\caption{Prova de conectivitat a la xarxa des de l'encaminador R2}
+\caption{OSPF - Prova de connectivitat a la xarxa des de l'encaminador R2}
 \end{center}
 \end{figure}
 \subsubsection{Encaminador R3}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R3-route.png}
-\caption{Comanda \textit{show ip route} en el encaminador R3}
+\caption{OSPF - Comanda \textit{show ip route} en el encaminador R3}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{Images/ospf-R3-database.png}
-\caption{Comanda \textit{show ip ospf database} en el encaminador R3}
+\caption{OSPF - Comanda \textit{show ip ospf database} en el encaminador R3}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{Images/ospf-R3-conectivity.png}
-\caption{Prova de conectivitat a la xarxa des de l'encaminador R3}
+\caption{OSPF - Prova de connectivitat a la xarxa des de l'encaminador R3}
 \end{center}
 \end{figure}
 \subsubsection{Encaminador R4}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R4-route.png}
-\caption{Comanda \textit{show ip route} en el encaminador R4}
+\caption{OSPF - Comanda \textit{show ip route} en el encaminador R4}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R4-database.png}
-\caption{Comanda \textit{show ip ospf database} en el encaminador R4}
+\caption{OSPF - Comanda \textit{show ip ospf database} en el encaminador R4}
 \end{center}
 \end{figure}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{Images/ospf-R4-conectivity.png}
-\caption{Prova de conectivitat a la xarxa des de l'encaminador R4}
+\caption{OSPF - Prova de connectivitat a la xarxa des de l'encaminador R4}
 \end{center}
 \end{figure}
 \section{BGP}
+És un protocol de comunicació mitjançant el qual s'intercanvia informació d'encaminament entre sistemes autònoms. Per exemple, els ISP registrats a Internet solen compondre's de diversos sistemes autònoms i per a aquest cas és necessari un protocol com BGP. Entre els sistemes autònoms dels ISP s'intercanvien les seues taules de rutes a través del protocol BGP. Aquest intercanvi d'informació d'encaminament es fa entre els encaminadors externs de cada sistema autònom. Aquests encaminadors han de suportar BGP. Es tracta del protocol més utilitzat per a xarxes amb intenció de configurar un EGP (external gateway protocol)
 \subsection{Topologia de la xarxa}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/bgp.png}
+\caption{BGP - Topologia de la xarxa a efectuar l'exercici}
+\end{center}
+\end{figure}
+Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200}.
+\subsection{Connectivitat entre sistemes autònoms}
+\subsubsection{Encaminador R6}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/bgp-R6-route.png}
+\caption{BGP - Comanda \textit{show ip route} en el encaminador R6}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/bgp-R6-conectivity.png}
+\caption{BGP - Prova de connectivitat a la xarxa des de l'encaminador R6}
+\end{center}
+\end{figure}
+\subsubsection{Encaminador R5}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/bgp-R5-route.png}
+\caption{BGP - Comanda \textit{show ip route} en el encaminador R5}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/bgp-R5-conectivity.png}
+\caption{BGP - Prova de connectivitat a la xarxa des de l'encaminador R5}
+\end{center}
+\end{figure}
+\subsubsection{Encaminador R1}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/bgp-R1-route.png}
+\caption{BGP - Comanda \textit{show ip route} en el encaminador R1}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/bgp-R1-conectivity.png}
+\caption{BGP - Prova de connectivitat a la xarxa des de l'encaminador R1}
+\end{center}
+\end{figure}
 \end{document}
               

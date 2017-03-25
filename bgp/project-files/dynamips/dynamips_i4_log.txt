@@ -1,0 +1,41 @@
+Mar 25 19:15:09.837 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 25 19:15:09.837 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51311.
+Mar 25 19:15:09.863 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 25 19:15:09.867 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Documents/XarxesII/XarxesPract1/bgp/project-files/dynamips 
+Mar 25 19:15:09.867 GENERAL: working_dir=/home/jaume/Documents/XarxesII/XarxesPract1/bgp/project-files/dynamips
+Mar 25 19:15:09.869 HYPERVISOR: exec_cmd: vm create R4 4 c7200 
+Mar 25 19:15:09.869 VM: VM R4 created.
+Mar 25 19:15:09.871 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5003 
+Mar 25 19:15:09.873 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4 
+Mar 25 19:15:09.875 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:09.877 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-FE 
+Mar 25 19:15:09.878 HYPERVISOR: exec_cmd: vm set_nvram R4 512 
+Mar 25 19:15:09.880 HYPERVISOR: exec_cmd: vm set_ios R4 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 25 19:15:09.883 HYPERVISOR: exec_cmd: vm set_ram R4 512 
+Mar 25 19:15:09.885 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:09.887 HYPERVISOR: exec_cmd: vm slot_remove_binding R4 0 0 
+Mar 25 19:15:09.890 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:09.896 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-2FE 
+Mar 25 19:15:09.898 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4 ca04.14b8.0000 
+Mar 25 19:15:09.899 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:09.901 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x608724c0 
+Mar 25 19:15:09.904 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Mar 25 19:15:09.907 HYPERVISOR: exec_cmd: vm set_config R4 configs/i4_startup-config.cfg 
+Mar 25 19:15:10.156 HYPERVISOR: exec_cmd: nio create_udp udp-ffb2b8e1-3a1e-4ec3-b285-05026a424872 10003 127.0.0.1 10000 
+Mar 25 19:15:10.158 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-ffb2b8e1-3a1e-4ec3-b285-05026a424872 
+Mar 25 19:15:10.160 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:12.227 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Mar 25 19:15:12.231 HYPERVISOR: exec_cmd: vm set_ghost_file R4 c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 25 19:15:12.234 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:15:12.236 HYPERVISOR: exec_cmd: vm start R4 
+Mar 25 19:28:03.942 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:28:03.946 HYPERVISOR: exec_cmd: vm stop R4 
+Mar 25 19:28:04.041 VM: VM R4 shutdown.
+Mar 25 19:28:04.044 HYPERVISOR: exec_cmd: vm extract_config R4 
+Mar 25 19:28:06.342 HYPERVISOR: exec_cmd: vm get_status R4 
+Mar 25 19:28:06.351 HYPERVISOR: exec_cmd: vm extract_config R4 
+Mar 25 19:28:06.358 HYPERVISOR: exec_cmd: vm delete R4 
+Mar 25 19:28:06.358 VM: VM R4 destroyed.
+Mar 25 19:28:06.365 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 25 19:28:06.594 HYPERVISOR: Stopped.
+Mar 25 19:28:06.594 GENERAL: reset done.

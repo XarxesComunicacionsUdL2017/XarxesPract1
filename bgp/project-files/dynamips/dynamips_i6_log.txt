@@ -1,0 +1,57 @@
+Mar 25 19:15:09.858 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 25 19:15:09.858 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 37293.
+Mar 25 19:15:09.880 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 25 19:15:09.883 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Documents/XarxesII/XarxesPract1/bgp/project-files/dynamips 
+Mar 25 19:15:09.883 GENERAL: working_dir=/home/jaume/Documents/XarxesII/XarxesPract1/bgp/project-files/dynamips
+Mar 25 19:15:09.885 HYPERVISOR: exec_cmd: vm create R6 6 c7200 
+Mar 25 19:15:09.885 VM: VM R6 created.
+Mar 25 19:15:09.887 HYPERVISOR: exec_cmd: vm set_con_tcp_port R6 5005 
+Mar 25 19:15:09.889 HYPERVISOR: exec_cmd: c7200 get_mac_addr R6 
+Mar 25 19:15:09.896 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:09.897 HYPERVISOR: exec_cmd: vm slot_add_binding R6 0 0 C7200-IO-FE 
+Mar 25 19:15:09.899 HYPERVISOR: exec_cmd: vm set_nvram R6 512 
+Mar 25 19:15:09.900 HYPERVISOR: exec_cmd: vm set_ios R6 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 25 19:15:09.903 HYPERVISOR: exec_cmd: vm set_ram R6 512 
+Mar 25 19:15:09.906 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:09.915 HYPERVISOR: exec_cmd: vm slot_remove_binding R6 0 0 
+Mar 25 19:15:09.929 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:09.937 HYPERVISOR: exec_cmd: vm slot_add_binding R6 0 0 C7200-IO-2FE 
+Mar 25 19:15:09.950 HYPERVISOR: exec_cmd: c7200 set_mac_addr R6 ca06.1afe.0000 
+Mar 25 19:15:09.952 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:09.954 HYPERVISOR: exec_cmd: vm set_idle_pc R6 0x608724c0 
+Mar 25 19:15:09.955 HYPERVISOR: exec_cmd: vm set_disk0 R6 0 
+Mar 25 19:15:09.957 HYPERVISOR: exec_cmd: vm set_config R6 configs/i6_startup-config.cfg 
+Mar 25 19:15:10.023 HYPERVISOR: exec_cmd: nio create_tap tap-893a56ae-a34d-4356-8cbe-df88529921df tap4 
+Mar 25 19:15:10.028 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 0 1 tap-893a56ae-a34d-4356-8cbe-df88529921df 
+Mar 25 19:15:10.029 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:10.185 HYPERVISOR: exec_cmd: nio create_udp udp-639054f9-881a-45b3-9ccc-a081667df0e3 10005 127.0.0.1 10004 
+Mar 25 19:15:10.191 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 0 0 udp-639054f9-881a-45b3-9ccc-a081667df0e3 
+Mar 25 19:15:10.194 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:11.730 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Mar 25 19:15:11.731 VM: VM Ghost created.
+Mar 25 19:15:11.732 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 25 19:15:11.733 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 25 19:15:11.734 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 25 19:15:11.735 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Mar 25 19:15:11.736 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 25 19:15:11.737 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 25 19:15:12.024 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 25 19:15:12.025 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 25 19:15:12.196 VM: VM Ghost shutdown.
+Mar 25 19:15:12.199 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 25 19:15:12.199 VM: VM Ghost destroyed.
+Mar 25 19:15:12.203 HYPERVISOR: exec_cmd: vm set_ghost_status R6 2 
+Mar 25 19:15:12.211 HYPERVISOR: exec_cmd: vm set_ghost_file R6 c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 25 19:15:12.214 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:15:12.219 HYPERVISOR: exec_cmd: vm start R6 
+Mar 25 19:28:03.940 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:28:03.946 HYPERVISOR: exec_cmd: vm stop R6 
+Mar 25 19:28:04.045 VM: VM R6 shutdown.
+Mar 25 19:28:04.051 HYPERVISOR: exec_cmd: vm extract_config R6 
+Mar 25 19:28:06.347 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 25 19:28:06.355 HYPERVISOR: exec_cmd: vm extract_config R6 
+Mar 25 19:28:06.363 HYPERVISOR: exec_cmd: vm delete R6 
+Mar 25 19:28:06.363 VM: VM R6 destroyed.
+Mar 25 19:28:06.367 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 25 19:28:06.658 HYPERVISOR: Stopped.
+Mar 25 19:28:06.658 GENERAL: reset done.
