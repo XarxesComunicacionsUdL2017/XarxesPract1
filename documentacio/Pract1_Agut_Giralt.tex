@@ -93,27 +93,126 @@ Fernández Camon, Cèsar                                                    %%%
 
 \tableofcontents
 \listoffigures 
+\listoftables
 
 \newpage
 
 \section{Objectius}
-L'objectiu principal d'aquesta pràctica és implementar els protocols apresos a classe per a 
-
-\section{Topologia de la xarxa}
+L'objectiu principal d'aquesta pràctica és implementar els protocols apresos a classe per a encaminament intern i extern. Per fer l'encaminament intern, utilitzarem els protocols \textbf{RIP} i \textbf{OSPF}. Per a l'encaminament extern farem ús del protocol \textbf{BGP}.
+\section{RIP}
+És un protocol de porta d'enllaç interna o IGP (Internal Gateway Protocol) utilitzat pels routers (encaminadors), encara que també poden actuar en equips, per intercanviar informació sobre de xarxes IP.
+\subsection{Topologia de la xarxa}
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{Images/screenshot.png}
+\includegraphics[scale=0.5]{Images/rip.png}
 \caption{Topologia de la xarxa a efectuar l'exercici}
 \end{center}
 \end{figure}
-Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200} 
-\subsection{Encaminador 1}
-sssss
-\section{Valors per defecte del encaminador}
-\textbf{Quins són els valors per defecte per els paquets \textit{update, invalid} i \textit{flush} ?\\Utilitza les comandes del encaminador i el programari Wireshark}
-\\\\
-Per a comprovar el temps per defecte
-
-
+Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200}
+...................
+\section{OSPF}
+És un protocol d'encaminament d'estat d'enllaç considerat de porta d'enllaç interna. Utilitza codi obert i envia els paquets primer pel camí més curt. Fa ús de l'algoritme SPF que es basa principalment en el valor de l'amplada de banda de les connexions.
+\subsection{Topologia de la xarxa}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf.png}
+\caption{Topologia de la xarxa a efectuar l'exercici}
+\end{center}
+\end{figure}
+Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200}. També hem de utilitzar les següents xarxes:
+\begin{table}[h!]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+Instead of: & Use:          \\ \hline
+10.0.0.0/24 & X.0.0.0/24    \\ \hline
+10.0.1.0/24 & X.0.1.0/24    \\ \hline
+10.0.2.0/24 & X.0.2.0/24    \\ \hline
+10.1.0.0/24 & X.1.0.0/24    \\ \hline
+11.0.0.0/8  & (X+1).0.0.0/8 \\ \hline
+12.0.0.0/8  & (X+2).0.0.0/8 \\ \hline
+\end{tabular}
+\caption{Xarxes a utilitzar en l'exercici OSPF}
+\end{table}
+\subsection{Imatges de la base de dades OSPF de cada encaminador}
+\subsubsection{Encaminador R1}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R1-route.png}
+\caption{Comanda \textit{show ip route} en el encaminador R1}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R1-database.png}
+\caption{Comanda \textit{show ip ospf database} en el encaminador R1}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/ospf-R1-conectivity.png}
+\caption{Prova de conectivitat a la xarxa des de l'encaminador R1}
+\end{center}
+\end{figure}
+\subsubsection{Encaminador R2}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R2-route.png}
+\caption{Comanda \textit{show ip route} en el encaminador R2}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R2-database.png}
+\caption{Comanda \textit{show ip ospf database} en el encaminador R2}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/ospf-R2-conectivity.png}
+\caption{Prova de conectivitat a la xarxa des de l'encaminador R2}
+\end{center}
+\end{figure}
+\subsubsection{Encaminador R3}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R3-route.png}
+\caption{Comanda \textit{show ip route} en el encaminador R3}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/ospf-R3-database.png}
+\caption{Comanda \textit{show ip ospf database} en el encaminador R3}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{Images/ospf-R3-conectivity.png}
+\caption{Prova de conectivitat a la xarxa des de l'encaminador R3}
+\end{center}
+\end{figure}
+\subsubsection{Encaminador R4}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R4-route.png}
+\caption{Comanda \textit{show ip route} en el encaminador R4}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R4-database.png}
+\caption{Comanda \textit{show ip ospf database} en el encaminador R4}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Images/ospf-R4-conectivity.png}
+\caption{Prova de conectivitat a la xarxa des de l'encaminador R4}
+\end{center}
+\end{figure}
+\section{BGP}
+\subsection{Topologia de la xarxa}
 \end{document}
               
