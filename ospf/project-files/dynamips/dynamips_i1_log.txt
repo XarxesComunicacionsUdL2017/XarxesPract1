@@ -1,0 +1,54 @@
+Mar 22 09:37:09.435 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 22 09:37:09.435 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38273.
+Mar 22 09:37:09.445 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 22 09:37:09.446 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Dropbox/UdL/Xarxes2/XarxesPract1/practica/ospf/project-files/dynamips 
+Mar 22 09:37:09.446 GENERAL: working_dir=/home/jaume/Dropbox/UdL/Xarxes2/XarxesPract1/practica/ospf/project-files/dynamips
+Mar 22 09:37:09.449 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Mar 22 09:37:09.449 VM: VM R2 created.
+Mar 22 09:37:09.453 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Mar 22 09:37:09.459 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Mar 22 09:37:09.462 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.466 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Mar 22 09:37:09.470 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Mar 22 09:37:09.472 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.473 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+Mar 22 09:37:09.476 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.480 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+Mar 22 09:37:09.486 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.489 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-FE-TX 
+Mar 22 09:37:09.493 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Mar 22 09:37:09.508 HYPERVISOR: exec_cmd: vm set_ios R2 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 22 09:37:09.510 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.512 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x608724c0 
+Mar 22 09:37:09.514 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Mar 22 09:37:09.516 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.1242.0000 
+Mar 22 09:37:09.518 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.524 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 PA-FE-TX 
+Mar 22 09:37:09.528 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Mar 22 09:37:09.602 HYPERVISOR: exec_cmd: nio create_tap tap-e08e6c49-45cb-4105-ba97-275bf17f5720 tap0 
+Mar 22 09:37:09.607 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 tap-e08e6c49-45cb-4105-ba97-275bf17f5720 
+Mar 22 09:37:09.609 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.635 HYPERVISOR: exec_cmd: nio create_tap tap-a8bc3aff-092d-4418-9e99-0f22cb4b7ff7 tap1 
+Mar 22 09:37:09.644 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 2 0 tap-a8bc3aff-092d-4418-9e99-0f22cb4b7ff7 
+Mar 22 09:37:09.649 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.711 HYPERVISOR: exec_cmd: nio create_udp udp-74d97c53-3aeb-4659-9972-00277619409c 10002 127.0.0.1 10003 
+Mar 22 09:37:09.719 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-74d97c53-3aeb-4659-9972-00277619409c 
+Mar 22 09:37:09.720 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:09.731 HYPERVISOR: exec_cmd: nio create_udp udp-d4efb18e-76b2-498d-a07c-e4dba2bd8b22 10004 127.0.0.1 10005 
+Mar 22 09:37:09.746 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-d4efb18e-76b2-498d-a07c-e4dba2bd8b22 
+Mar 22 09:37:09.747 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:14.985 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Mar 22 09:37:14.986 HYPERVISOR: exec_cmd: vm set_ghost_file R2 c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 22 09:37:14.989 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:37:14.991 HYPERVISOR: exec_cmd: vm start R2 
+Mar 22 09:42:18.839 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:42:18.842 HYPERVISOR: exec_cmd: vm stop R2 
+Mar 22 09:42:19.014 VM: VM R2 shutdown.
+Mar 22 09:42:19.019 HYPERVISOR: exec_cmd: vm extract_config R2 
+Mar 22 09:42:28.450 HYPERVISOR: exec_cmd: vm get_status R2 
+Mar 22 09:42:28.455 HYPERVISOR: exec_cmd: vm extract_config R2 
+Mar 22 09:42:28.461 HYPERVISOR: exec_cmd: vm delete R2 
+Mar 22 09:42:28.461 VM: VM R2 destroyed.
+Mar 22 09:42:28.463 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 22 09:42:28.781 HYPERVISOR: Stopped.
+Mar 22 09:42:28.781 GENERAL: reset done.

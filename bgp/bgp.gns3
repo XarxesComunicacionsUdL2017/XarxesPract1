@@ -1,0 +1,933 @@
+{
+    "auto_start": false,
+    "name": "bgp",
+    "project_id": "8dda71aa-14e9-4a19-9f14-423498d1beaa",
+    "revision": 4,
+    "show_port_names": true,
+    "topology": {
+        "ellipses": [
+            {
+                "border_color": "#ad7fa8",
+                "border_style": 2,
+                "height": 350.0,
+                "width": 426.0,
+                "x": -231.0,
+                "y": -238.0,
+                "z": -1.0
+            },
+            {
+                "border_color": "#ad7fa8",
+                "border_style": 2,
+                "height": 156.0,
+                "rotation": -20.0,
+                "width": 479.6128654916489,
+                "x": 118.99999999999986,
+                "y": -35.000000000000114,
+                "z": -1.0
+            },
+            {
+                "border_color": "#204a87",
+                "border_style": 2,
+                "height": 611.0,
+                "width": 987.0,
+                "x": -312.0,
+                "y": -379.0,
+                "z": -2.0
+            },
+            {
+                "border_color": "#204a87",
+                "border_style": 2,
+                "height": 276.0,
+                "width": 274.0,
+                "x": -614.0,
+                "y": -58.0,
+                "z": -1.0
+            },
+            {
+                "border_color": "#204a87",
+                "border_style": 2,
+                "height": 219.0,
+                "width": 267.0,
+                "x": 68.0,
+                "y": 260.0,
+                "z": -1.0
+            }
+        ],
+        "links": [
+            {
+                "description": "Link from R5 port FastEthernet0/1 to C3 port nio_tap:tap3",
+                "destination_node_id": 8,
+                "destination_port_id": 71,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "nio_tap:tap3",
+                    "x": 78.12150896640884,
+                    "y": 74.97623997414351
+                },
+                "id": 1,
+                "source_node_id": 7,
+                "source_port_id": 58,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": 34.37849103359116,
+                    "y": -17.97623997414351
+                }
+            },
+            {
+                "description": "Link from R2 port FastEthernet1/0 to R5 port FastEthernet0/0",
+                "destination_node_id": 7,
+                "destination_port_id": 57,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": 69.44546829236361,
+                    "y": 5.5158305956800575
+                },
+                "id": 2,
+                "source_node_id": 2,
+                "source_port_id": 5,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/0",
+                    "x": -3.445468292363614,
+                    "y": 38.48416940431994
+                }
+            },
+            {
+                "description": "Link from R2 port FastEthernet0/0 to R1 port FastEthernet0/0",
+                "destination_node_id": 1,
+                "destination_port_id": 2,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": -51.51328234917651,
+                    "y": 43.05339069838334
+                },
+                "id": 3,
+                "source_node_id": 2,
+                "source_port_id": 6,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": 29.513282349176507,
+                    "y": -32.053390698383325
+                }
+            },
+            {
+                "description": "Link from R3 port FastEthernet2/0 to R4 port FastEthernet0/0",
+                "destination_node_id": 4,
+                "destination_port_id": 21,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": -21.669676463793508,
+                    "y": 46.45345587992625
+                },
+                "id": 4,
+                "source_node_id": 3,
+                "source_port_id": 12,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f2/0",
+                    "x": 78.66967646379351,
+                    "y": 9.546544120073747
+                }
+            },
+            {
+                "description": "Link from R1 port FastEthernet0/1 to R3 port FastEthernet0/0",
+                "destination_node_id": 3,
+                "destination_port_id": 10,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": -3.8984544928337783,
+                    "y": -34.664895550329206
+                },
+                "id": 5,
+                "source_node_id": 1,
+                "source_port_id": 3,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": 81.89845449283376,
+                    "y": 51.66489555032922
+                }
+            },
+            {
+                "description": "Link from R2 port FastEthernet0/1 to R3 port FastEthernet0/1",
+                "destination_node_id": 3,
+                "destination_port_id": 11,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": -40.997637260401376,
+                    "y": 20.56524307325651
+                },
+                "id": 6,
+                "source_node_id": 2,
+                "source_port_id": 7,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": 71.99763726040135,
+                    "y": 28.43475692674349
+                }
+            },
+            {
+                "description": "Link from R6 port FastEthernet0/1 to C4 port nio_tap:tap4",
+                "destination_node_id": 9,
+                "destination_port_id": 72,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "nio_tap:tap4",
+                    "x": 76.14735286008909,
+                    "y": -4.859249330051966
+                },
+                "id": 7,
+                "source_node_id": 10,
+                "source_port_id": 62,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": 36.352647139910914,
+                    "y": 61.859249330051966
+                }
+            },
+            {
+                "description": "Link from R3 port FastEthernet1/0 to R6 port FastEthernet0/0",
+                "destination_node_id": 10,
+                "destination_port_id": 61,
+                "destination_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/0",
+                    "x": 31.345366512508775,
+                    "y": -17.965762697865216
+                },
+                "id": 8,
+                "source_node_id": 3,
+                "source_port_id": 9,
+                "source_port_label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/0",
+                    "x": -3.3453665125087753,
+                    "y": 72.96576269786519
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "description": "Router c7200",
+                "dynamips_id": 1,
+                "id": 1,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R1",
+                    "x": 19.484375,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R2 on port FastEthernet0/0",
+                        "id": 2,
+                        "link_id": 3,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet0/0",
+                        "id": 3,
+                        "link_id": 5,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5000,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca01.1230.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R1",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "sparsemem": true,
+                    "startup_config": "configs/i1_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "cb76f1fe-12c4-4854-bc76-3ed1c3ff0182",
+                "x": -52.0,
+                "y": -197.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 2,
+                "id": 2,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R2",
+                    "x": -16.515625,
+                    "y": -13.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R5 on port FastEthernet0/0",
+                        "id": 5,
+                        "link_id": 2,
+                        "name": "FastEthernet1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R1 on port FastEthernet0/0",
+                        "id": 6,
+                        "link_id": 3,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet0/1",
+                        "id": 7,
+                        "link_id": 6,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5001,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca02.1242.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R2",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i2_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "780a3a56-3acc-4085-bd15-9d3d22d359a2",
+                "x": -238.0,
+                "y": -14.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 3,
+                "id": 3,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R3",
+                    "x": 39.484375,
+                    "y": 39.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 1,
+                        "description": "connected to R6 on port FastEthernet0/0",
+                        "id": 9,
+                        "link_id": 8,
+                        "name": "FastEthernet1/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R1 on port FastEthernet0/1",
+                        "id": 10,
+                        "link_id": 5,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R2 on port FastEthernet0/1",
+                        "id": 11,
+                        "link_id": 6,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 2,
+                        "description": "connected to R4 on port FastEthernet0/0",
+                        "id": 12,
+                        "link_id": 4,
+                        "name": "FastEthernet2/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5002,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca03.1251.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R3",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-FE-TX",
+                    "slot2": "PA-FE-TX",
+                    "sparsemem": true,
+                    "startup_config": "configs/i3_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "3f736deb-a407-4c98-92da-b5d2221e7a3b",
+                "x": 130.0,
+                "y": -10.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 4,
+                "id": 4,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R4",
+                    "x": 19.484375,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet2/0",
+                        "id": 21,
+                        "link_id": 4,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "id": 22,
+                        "name": "FastEthernet0/1",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5003,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca04.14b8.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R4",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "sparsemem": true,
+                    "startup_config": "configs/i4_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "ca427bfc-da2a-44e5-bb17-7b07d4f8466d",
+                "x": 481.0,
+                "y": -126.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 5,
+                "id": 7,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R5",
+                    "x": 18.484375,
+                    "y": 47.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R2 on port FastEthernet1/0",
+                        "id": 57,
+                        "link_id": 2,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to C3 on port nio_tap:tap3",
+                        "id": 58,
+                        "link_id": 1,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_TAP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5004,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca05.1ac1.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R5",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "sparsemem": true,
+                    "startup_config": "configs/i5_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "3eb1a5bf-f4a3-4508-bc59-1c7b3c67f64e",
+                "x": -521.0,
+                "y": 114.0
+            },
+            {
+                "description": "Cloud",
+                "id": 8,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "C3",
+                    "x": 66.21875,
+                    "y": -25.0
+                },
+                "ports": [
+                    {
+                        "description": "connected to R5 on port FastEthernet0/1",
+                        "id": 71,
+                        "link_id": 1,
+                        "name": "nio_tap:tap3",
+                        "nio": "NIO_TAP",
+                        "stub": true
+                    }
+                ],
+                "properties": {
+                    "name": "C3",
+                    "nios": [
+                        "nio_tap:tap3"
+                    ]
+                },
+                "server_id": 1,
+                "type": "Cloud",
+                "x": -563.5,
+                "y": -15.0
+            },
+            {
+                "description": "Cloud",
+                "id": 9,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "C4",
+                    "x": 158.21875,
+                    "y": 26.0
+                },
+                "ports": [
+                    {
+                        "description": "connected to R6 on port FastEthernet0/1",
+                        "id": 72,
+                        "link_id": 7,
+                        "name": "nio_tap:tap4",
+                        "nio": "NIO_TAP",
+                        "stub": true
+                    }
+                ],
+                "properties": {
+                    "name": "C4",
+                    "nios": [
+                        "nio_tap:tap4"
+                    ]
+                },
+                "server_id": 1,
+                "type": "Cloud",
+                "x": 105.5,
+                "y": 398.0
+            },
+            {
+                "description": "Router c7200",
+                "dynamips_id": 6,
+                "id": 10,
+                "label": {
+                    "color": "#ff000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "R6",
+                    "x": 69.484375,
+                    "y": 7.0
+                },
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to R3 on port FastEthernet1/0",
+                        "id": 61,
+                        "link_id": 8,
+                        "name": "FastEthernet0/0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to C4 on port nio_tap:tap4",
+                        "id": 62,
+                        "link_id": 7,
+                        "name": "FastEthernet0/1",
+                        "nio": "NIO_TAP",
+                        "port_number": 1
+                    }
+                ],
+                "properties": {
+                    "auto_delete_disks": true,
+                    "clock_divisor": 4,
+                    "console": 5005,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x608724c0",
+                    "idlesleep": 30,
+                    "image": "c7200-jk9s-mz.124-13b.image",
+                    "image_md5sum": "fa32924180f470cab7430f00d1501673",
+                    "mac_addr": "ca06.1afe.0000",
+                    "midplane": "vxr",
+                    "mmap": true,
+                    "name": "R6",
+                    "npe": "npe-400",
+                    "nvram": 512,
+                    "platform": "c7200",
+                    "power_supplies": [
+                        1,
+                        1
+                    ],
+                    "ram": 512,
+                    "sensors": [
+                        22,
+                        22,
+                        22,
+                        22
+                    ],
+                    "slot0": "C7200-IO-2FE",
+                    "sparsemem": true,
+                    "startup_config": "configs/i6_startup-config.cfg",
+                    "system_id": "FTX0945W0MY"
+                },
+                "server_id": 1,
+                "type": "C7200",
+                "vm_id": "b42e82e5-afee-47b3-a0dc-d44f3ee19024",
+                "x": 143.0,
+                "y": 304.0
+            }
+        ],
+        "notes": [
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.0.1",
+                "x": -126.0,
+                "y": -170.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.0.2",
+                "x": -225.0,
+                "y": -64.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.2.2",
+                "x": -181.0,
+                "y": 27.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.2.3",
+                "x": 65.0,
+                "y": 29.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.1.3",
+                "x": 111.0,
+                "y": -64.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.0.1.1",
+                "x": 13.898454492833764,
+                "y": -164.33510444967078
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.1.0.1",
+                "x": 199.0,
+                "y": 23.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "10.1.0.2",
+                "x": 442.0,
+                "y": -69.5
+            },
+            {
+                "color": "#ffad7fa8",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Area 1 (stub)",
+                "x": 467.0,
+                "y": -200.5
+            },
+            {
+                "color": "#ffad7fa8",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "Area 0",
+                "x": 9.0,
+                "y": -271.5
+            },
+            {
+                "color": "#ff204a87",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "AS1",
+                "x": 175.0,
+                "y": -347.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "11.0.0.1",
+                "x": -255.0,
+                "y": 40.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "11.0.0.2",
+                "x": -454.0,
+                "y": 132.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "12.0.0.2",
+                "x": 177.0,
+                "y": 268.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "12.0.0.1",
+                "x": 100.0,
+                "y": 81.5
+            },
+            {
+                "color": "#ff204a87",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "AS2",
+                "x": -507.0,
+                "y": -90.5
+            },
+            {
+                "color": "#ff204a87",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "AS3",
+                "x": 343.0,
+                "y": 356.5
+            },
+            {
+                "color": "#ffef2929",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "D",
+                "x": -44.0,
+                "y": -148.5
+            },
+            {
+                "color": "#ffef2929",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "D",
+                "x": -12.0,
+                "y": -146.5
+            },
+            {
+                "color": "#ffef2929",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "D",
+                "x": 101.0,
+                "y": -12.5
+            },
+            {
+                "color": "#ffef2929",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "D",
+                "x": 456.0,
+                "y": -117.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "192.0.0.0 / 22",
+                "x": -533.0,
+                "y": 6.5
+            },
+            {
+                "color": "#ff000000",
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                "text": "192.0.4.0 / 22",
+                "x": 137.0,
+                "y": 419.5
+            }
+        ],
+        "servers": [
+            {
+                "host": "127.0.0.1",
+                "id": 1,
+                "local": true,
+                "port": 3080,
+                "protocol": "http",
+                "vm": false
+            }
+        ]
+    },
+    "type": "topology",
+    "version": "1.5.2"
+}

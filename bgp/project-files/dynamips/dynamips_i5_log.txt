@@ -1,0 +1,90 @@
+Mar 25 16:25:17.044 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 25 16:25:17.044 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38743.
+Mar 25 16:25:17.070 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 25 16:25:17.072 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Dropbox/UdL/Xarxes2/XarxesPract1/practica/bgp/project-files/dynamips 
+Mar 25 16:25:17.072 GENERAL: working_dir=/home/jaume/Dropbox/UdL/Xarxes2/XarxesPract1/practica/bgp/project-files/dynamips
+Mar 25 16:25:17.085 HYPERVISOR: exec_cmd: vm create R5 5 c7200 
+Mar 25 16:25:17.085 VM: VM R5 created.
+Mar 25 16:25:17.100 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Mar 25 16:25:17.103 HYPERVISOR: exec_cmd: c7200 get_mac_addr R5 
+Mar 25 16:25:17.106 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:17.109 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-FE 
+Mar 25 16:25:17.114 HYPERVISOR: exec_cmd: vm set_ios R5 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 25 16:25:17.120 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:17.125 HYPERVISOR: exec_cmd: vm slot_remove_binding R5 0 0 
+Mar 25 16:25:17.132 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:17.135 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-2FE 
+Mar 25 16:25:17.141 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:17.145 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x608724c0 
+Mar 25 16:25:17.150 HYPERVISOR: exec_cmd: vm set_nvram R5 512 
+Mar 25 16:25:17.154 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Mar 25 16:25:17.161 HYPERVISOR: exec_cmd: vm set_ram R5 512 
+Mar 25 16:25:17.168 HYPERVISOR: exec_cmd: c7200 set_mac_addr R5 ca05.1ac1.0000 
+Mar 25 16:25:17.175 HYPERVISOR: exec_cmd: vm set_config R5 configs/i5_startup-config.cfg 
+Mar 25 16:25:17.223 HYPERVISOR: exec_cmd: nio create_tap tap-72ef13ff-68df-4172-9744-4ef2019d6470 tap3 
+Mar 25 16:25:17.229 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 1 tap-72ef13ff-68df-4172-9744-4ef2019d6470 
+Mar 25 16:25:17.238 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:17.361 HYPERVISOR: exec_cmd: nio create_udp udp-efc4cba2-959b-4f88-afaa-bccb4a52f48d 10001 127.0.0.1 10000 
+Mar 25 16:25:17.370 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-efc4cba2-959b-4f88-afaa-bccb4a52f48d 
+Mar 25 16:25:17.375 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:19.814 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Mar 25 16:25:19.814 VM: VM Ghost created.
+Mar 25 16:25:19.829 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Mar 25 16:25:19.831 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 25 16:25:19.833 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 25 16:25:19.835 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Mar 25 16:25:19.836 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 25 16:25:19.838 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 25 16:25:20.097 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 25 16:25:20.098 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 25 16:25:20.252 VM: VM Ghost shutdown.
+Mar 25 16:25:20.256 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 25 16:25:20.256 VM: VM Ghost destroyed.
+Mar 25 16:25:20.258 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Mar 25 16:25:20.258 HYPERVISOR: exec_cmd: vm set_ghost_file R5 c7200-jk9s-mz.124-13b.image-512.ghost 
+Mar 25 16:25:20.259 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 16:25:20.260 HYPERVISOR: exec_cmd: vm start R5 
+Mar 25 17:07:27.972 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 17:07:27.980 HYPERVISOR: exec_cmd: vm stop R5 
+Mar 25 17:07:28.145 VM: VM R5 shutdown.
+Mar 25 17:07:28.148 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:34.493 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:34.657 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:34.770 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:34.927 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.066 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.192 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.321 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.436 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.575 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:35.746 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.171 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.298 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.440 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.614 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.741 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:36.903 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:37.055 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:37.214 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:37.880 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.011 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.170 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.324 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.498 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.630 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.834 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:38.838 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:39.103 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:39.141 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:40.404 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:40.811 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:41.123 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:41.289 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:07:41.446 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:10:06.472 HYPERVISOR: exec_cmd: vm get_status R5 
+Mar 25 17:10:06.481 HYPERVISOR: exec_cmd: vm extract_config R5 
+Mar 25 17:10:06.488 HYPERVISOR: exec_cmd: vm delete R5 
+Mar 25 17:10:06.488 VM: VM R5 destroyed.
+Mar 25 17:10:06.494 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 25 17:10:06.635 HYPERVISOR: Stopped.
+Mar 25 17:10:06.635 GENERAL: reset done.
