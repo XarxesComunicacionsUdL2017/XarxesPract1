@@ -141,9 +141,29 @@ Finalment, en la següent imatge podem veure com després de 240 segons sense ca
 \end{center}
 \end{figure}
 \subsection{Demostreu que per defecte split-horizon està activat i poison-reverse desactivat}
-
+Com podem veure en la següent captura, si just elaborar el projecte fem un \textit{show ip interface}, podem observar que cada interfície per defecte té la funció \textit{split-horizon} activat. La funció \textit{poison-reverse} no està disponible per aquests encaminadors.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{Images/RIP-splithorizonenabled.png}
+\caption{RIP - Split-horizon activat per defecte}
+\end{center}
+\end{figure}
 \subsection{Demostreu el problema  	\textit{count-to-infinity} en la xarxa}
-Després de desactivar split-horizon per cada interfície de la xarxa i canviar els temps per defecte de BGP (actualitzacions cada 2 segons, invalid als 10 segons, hold-time als 0 segons i eliminar la ruta als 20 segons), hem pogut experimentar que si desconnectem el encaminador R1 és pot produir el problema \textit{count-to-infinity}.
+Després de desactivar split-horizon per cada interfície de la xarxa i canviar els temps per defecte de BGP (actualitzacions cada 2 segons, invalid als 10 segons, hold-time als 0 segons i eliminar la ruta als 20 segons), hem pogut experimentar que si desconnectem el encaminador R1 és pot produir el problema \textit{count-to-infinity} degut a que la xarxa 10.0.0.0 quedara aïllada.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{Images/RIP-infinity.png}
+\caption{RIP - Count-to-infinity problem}
+\end{center}
+\end{figure}
+\subsection{Demostreu que quan split-horizon està activat no és produeix aquest problema (count-to-infinity)}
+En aquest apartat, farem el mateix experiment que l'exercici anterior però en aquest cas amb la funció split-horizon connectat. Podem observar que directament, en quan desactivem el encaminador R1 i la xarxa \textit{10.0.0.0} queda aïllada, els encaminadors R2 i R3 marquen la ruta amb mètrica 16 sense experimentar el problema \textit{count-to-infinity} com podem veure en la següent imatge
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{Images/RIP-exercici5.png}
+\caption{RIP - Count-to-infinity solucionat activant split-horizon}
+\end{center}
+\end{figure}
 \section{OSPF}
 És un protocol d'encaminament d'estat d'enllaç considerat de porta d'enllaç interna. Utilitza codi obert i envia els paquets primer pel camí més curt. Fa ús de l'algoritme SPF que es basa principalment en el valor de l'amplada de banda de les connexions.
 \subsection{Topologia de la xarxa}
@@ -297,5 +317,6 @@ Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco 
 \end{center}
 \end{figure}
 \subsection{Principals problemes a la hora de configurar}
+El primer problema que ens vam trobar va ser que els sistemes autònoms 2 i 3, amb els encaminadors R5 i R6 respectivament, no podíem veure les xarxes del sistema autònom 1. Aquest problema el vam solucionar redistribuint el OSPF del sistema autònom 1 per el protocol BGP d'aquest sistema autònom. Després, el següent problema que vam trobar va ser que el sistema autònom 1 no coneixia les xarxes dels sistemes autònoms 2 i 3 i això ho vam solucionar fent redistribuint les xarxes connectades a R5 i R6 per el protocol BGP i redistribuir per el protocol OSPF del sistema autònom 1, les xarxes que coneixia BGP. Finalment, el problema que teníem va ser que la xarxa 11.0.0.0 i la xarxa 12.0.0.0 no eren xarxes conegudes per als sistemes autònoms 2 i 3. Redistribuint per protocol OSPF del sistema autònom 1 les rutes connectades, és a dir, la xarxa 11.0.0.0 i la 12.0.0.0, en els encaminadors R2 i R3, vam aconseguir que hi hagués connectivitat entre tots els sistemes autònoms. També vam haver d'utilitzar CIDR en els encaminadors R2 i R3 però no va suposar un problema.
 \end{document}
               
