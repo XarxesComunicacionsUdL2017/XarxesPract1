@@ -10,7 +10,7 @@
 \usepackage{anysize}
 \marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
 
-\usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=black]{hyperref}
 
 % Para agregar encabezado y pie de página
 \usepackage{fancyhdr} 
@@ -19,12 +19,14 @@
 \fancyhead[L]{\footnotesize XARXES I COMUNICACIONS} %encabezado izquierda
 \fancyhead[R]{\footnotesize EPS-UdL}   % dereecha
 \fancyfoot[R]{\footnotesize Pràctica 1}  % Pie derecha
+\fancyfoot[C]{\thepage}
 \fancyfoot[L]{\footnotesize Grau en Enginyeria Informàtica}  %izquierda
 \renewcommand{\footrulewidth}{0.4pt}
 
 %%%%%%%% TERMINA PREÁMBULO %%%%%%%%%%%%
 
 \begin{document}
+\thispagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                                                     %%%
@@ -96,20 +98,52 @@ Fernández Camon, Cèsar                                                    %%%
 \listoftables
 
 \newpage
-
 \section{Objectius}
 L'objectiu principal d'aquesta pràctica és implementar els protocols apresos a classe per a encaminament intern i extern. Per fer l'encaminament intern, utilitzarem els protocols \textbf{RIP} i \textbf{OSPF}. Per a l'encaminament extern farem ús del protocol \textbf{BGP}.
 \section{RIP}
-És un protocol de porta d'enllaç interna o IGP (Internal Gateway Protocol) utilitzat pels routers (encaminadors), encara que també poden actuar en equips, per intercanviar informació sobre de xarxes IP.
+És un protocol de porta d'enllaç interna o IGP (Internal Gateway Protocol) utilitzat pels routers (encaminadors), encara que també poden actuar en equips, per intercanviar informació sobre de xarxes IP. En aquest exercici haurem de realitzar unes preguntes sobre el protocol RIP i sobre el seu funcionament. 
 \subsection{Topologia de la xarxa}
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{Images/rip.png}
-\caption{OSPF - Topologia de la xarxa a efectuar l'exercici}
+\includegraphics[scale=0.7]{Images/rip.png}
+\caption{RIP - Topologia de la xarxa a efectuar l'exercici}
 \end{center}
 \end{figure}
 Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco c7200}
-...................
+\subsection{Temps de actualització, rutes invàlides i rutes eliminades per defecte}
+A continuació, fent ús del programa Wireshark i de comandes al encaminador Cisco, hem de demostrar els diferents temps que té el protocol RIP per actualitzar rutes, marcar-les com invàlides i eliminar-les.
+\\\\
+En la següent imatge podem veure com els temps d'actualització s'envien cada 30 segons:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{Images/RIP-update.png}
+\caption{RIP - Temps d'actualització}
+\end{center}
+\end{figure}
+En la següent imatge s'observa que per defecte, el protocol RIP marca la ruta com invàlida passats 180 segons sense rebre cap paquet d'actualització. En la primera imatge podem veure la hora a la qual hem tancat el encaminador i la seva taula d'encaminament RIP i en la segona imatge podem veure que han passat uns 180 segons i en la seva taula podem veure que hi ha marcat que la ruta és possible que sigui invàlida.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{Images/RIP-invalid1.png}
+\caption{RIP - Temps ruta invàlida}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{Images/RIP-invalid2.png}
+\caption{RIP - Temps ruta invàlida}
+\end{center}
+\end{figure}
+Finalment, en la següent imatge podem veure com després de 240 segons sense cap paquet d'actualització, el protocol RIP per defecte elimina la ruta de la taula d'encaminament del encaminador.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.3]{Images/RIP-flush.png}
+\caption{RIP - Temps ruta eliminada}
+\end{center}
+\end{figure}
+\subsection{Demostreu que per defecte split-horizon està activat i poison-reverse desactivat}
+
+\subsection{Demostreu el problema  	\textit{count-to-infinity} en la xarxa}
+Després de desactivar split-horizon per cada interfície de la xarxa i canviar els temps per defecte de BGP (actualitzacions cada 2 segons, invalid als 10 segons, hold-time als 0 segons i eliminar la ruta als 20 segons), hem pogut experimentar que si desconnectem el encaminador R1 és pot produir el problema \textit{count-to-infinity}.
 \section{OSPF}
 És un protocol d'encaminament d'estat d'enllaç considerat de porta d'enllaç interna. Utilitza codi obert i envia els paquets primer pel camí més curt. Fa ús de l'algoritme SPF que es basa principalment en el valor de l'amplada de banda de les connexions.
 \subsection{Topologia de la xarxa}
@@ -262,5 +296,6 @@ Per a la realització de aquest exercici utilitzarem encaminadors \textbf{Cisco 
 \caption{BGP - Prova de connectivitat a la xarxa des de l'encaminador R1}
 \end{center}
 \end{figure}
+\subsection{Principals problemes a la hora de configurar}
 \end{document}
               
